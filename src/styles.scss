@@ -8,3 +8,10 @@ $Primary_White: #f2f2f2f2;
 
 $Semantic_Red: #d9363b;
 $Semantic_Green: #5eb663;
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: $Primary_brown;
+}

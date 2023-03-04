@@ -1,0 +1,17 @@
+@import "../../../../styles.scss";
+
+.container {
+  width: 186.5vh;
+  height: 100vh;
+  background-image: url("../../../../assets/00004-3549761131\ \(1\)-standard-scale-4_00x.png");
+  background-size: cover;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.content-container {
+  width: 80vh;
+  height: 100vh;
+  background-color: green;
+}
