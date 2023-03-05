@@ -1,17 +1,30 @@
 @import "../../../../styles.scss";
 
 .container {
-  width: 186.5vh;
   height: 100vh;
-  background-image: url("../../../../assets/00004-3549761131\ \(1\)-standard-scale-4_00x.png");
-  background-size: cover;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  order: 0;
+  flex: 1 1 auto;
+  align-self: auto;
 }
 
 .content-container {
-  width: 80vh;
+  width: 78vw;
+  margin-left: 30vh;
   height: 100vh;
-  background-color: green;
+  // background: rgb(72, 59, 39);
+  background: linear-gradient(
+    0deg,
+    $Primary_darBrown 80%,
+    rgba(80, 103, 235, 0) 100%
+  );
+  text-align: center;
+  color: white;
+  align-self: auto;
+  padding: 20px;
+  @include boxShadow;
 }

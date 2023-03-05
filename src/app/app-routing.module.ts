@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/pages/home/home.component';
 
+//wildcard (make sure its last route)
 const routes: Routes = [{ path: '', component: HomeComponent }];
 
 @NgModule({
