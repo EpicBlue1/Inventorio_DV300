@@ -21,9 +21,17 @@ body {
   background-image: url("./assets/00012-2272667490.png");
   background-size: contain;
   background-size: 30%;
-  font-family: "Space Mono", monospace;
+  // font-family: "Space Mono", monospace;
+  // font-family: "Black Ops One", cursive !important;
+  // font-family: "Righteous", cursive !important;
 }
 
 h1 {
-  font-size: 42px;
+  font-size: 48px;
+  font-family: "Tilt Neon", cursive !important;
+}
+
+p {
+  font-size: 18px;
+  font-family: "Tilt Neon", cursive !important;
 }

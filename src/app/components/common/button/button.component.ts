@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, ElementRef, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-button',
@@ -8,10 +8,26 @@ import { Component, Input, OnInit } from '@angular/core';
 export class ButtonComponent implements OnInit {
   @Input() 'text': string;
   @Input() 'style': string;
+  @Input() 'title': string;
   @Input() 'active': boolean;
   @Input() 'icon': string;
 
-  constructor() {}
+  constructor(private el: ElementRef) {}
 
   ngOnInit(): void {}
+
+  AnimateNavBtn() {
+    let navBtnImg = this.el.nativeElement.querySelector('img');
+    let navBtn = this.el.nativeElement.querySelector('button');
+    let title = this.el.nativeElement.querySelector('p');
+    if (!navBtnImg.classList.contains('moveUp')) {
+      navBtnImg.classList.add('moveUp');
+      navBtn.classList.add('moveLeft');
+      title.classList.remove('weg');
+    } else {
+      navBtnImg.classList.remove('moveUp');
+      navBtn.classList.remove('moveLeft');
+      title.classList.add('weg');
+    }
+  }
 }

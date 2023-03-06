@@ -1,7 +1,12 @@
-<button class="btn {{ style }}">
+<button
+  (mouseleave)="AnimateNavBtn()"
+  (mouseenter)="AnimateNavBtn()"
+  class="btn {{ style }}"
+>
   {{ text == "" ? "" : text
   }}<img
     class="{{ icon == 'none' ? 'none' : 'icon-img' }}"
     src="{{ '../../../../assets/' + icon }}"
   />
+  <p class="title weg">{{ title }}</p>
 </button>
