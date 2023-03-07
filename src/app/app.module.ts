@@ -6,9 +6,12 @@ import { AppComponent } from './app.component';
 import { ButtonComponent } from './components/common/button/button.component';
 import { HomeComponent } from './components/pages/home/home.component';
 import { NavComponent } from './components/partials/nav/nav.component';
+import { CraftingComponent } from './components/pages/crafting/crafting.component';
+import { InventoryComponent } from './components/pages/inventory/inventory.component';
+import { MapComponent } from './components/pages/map/map.component';
 
 @NgModule({
-  declarations: [AppComponent, NavComponent, ButtonComponent, HomeComponent],
+  declarations: [AppComponent, NavComponent, ButtonComponent, HomeComponent, CraftingComponent, InventoryComponent, MapComponent],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],

@@ -13,8 +13,8 @@
 }
 
 .content-container {
-  width: 78vw;
-  margin-left: 30vh;
+  width: 71vw;
+  margin-left: 25vh;
   height: 100vh;
   // background: rgb(72, 59, 39);
   background: linear-gradient(
@@ -25,6 +25,6 @@
   text-align: center;
   color: white;
   align-self: auto;
-  padding: 20px;
+  padding: 100px 100px 100px 100px;
   @include boxShadow;
 }

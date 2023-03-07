@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap");
 /* You can add global styles to this file, and also import other style files */
 $primary_dark: #191614;
 $Primary_orange: #b0742f;
@@ -28,10 +29,11 @@ body {
 
 h1 {
   font-size: 48px;
-  font-family: "Tilt Neon", cursive !important;
+  // font-family: "Tilt Neon", cursive !important;
+  font-family: "Roboto Slab", serif;
 }
 
 p {
-  font-size: 18px;
-  font-family: "Tilt Neon", cursive !important;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif !important;
 }
