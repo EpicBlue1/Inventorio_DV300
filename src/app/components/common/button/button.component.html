@@ -1,6 +1,8 @@
 <button
+  [routerLink]="router"
   (mouseleave)="AnimateNavBtn()"
   (mouseenter)="AnimateNavBtn()"
+  (click)="onClick($event)"
   class="btn {{ style }}"
 >
   {{ text == "" ? "" : text
