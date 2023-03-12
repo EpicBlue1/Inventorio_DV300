@@ -1,0 +1,18 @@
+@import "../../../../styles.scss";
+
+.location-item {
+  width: 90%;
+  height: 50px;
+  background-color: $Primary_brown;
+  margin: 0 auto;
+  border-radius: 5px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.Item-Icon {
+  width: 40px;
+  height: 40px;
+}

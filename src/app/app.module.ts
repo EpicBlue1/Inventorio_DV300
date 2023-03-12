@@ -9,9 +9,10 @@ import { NavComponent } from './components/partials/nav/nav.component';
 import { CraftingComponent } from './components/pages/crafting/crafting.component';
 import { InventoryComponent } from './components/pages/inventory/inventory.component';
 import { MapComponent } from './components/pages/map/map.component';
+import { LocationItemComponent } from './components/common/location-item/location-item.component';
 
 @NgModule({
-  declarations: [AppComponent, NavComponent, ButtonComponent, HomeComponent, CraftingComponent, InventoryComponent, MapComponent],
+  declarations: [AppComponent, NavComponent, ButtonComponent, HomeComponent, CraftingComponent, InventoryComponent, MapComponent, LocationItemComponent],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],

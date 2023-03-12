@@ -1,1 +1,38 @@
-<p>map works!</p>
+<div class="container">
+  <div class="content-container">
+    <div class="Head">
+      <h1>Map</h1>
+    </div>
+
+    <div class="info-container">
+      <div class="Map-section">
+        <div class="Map">
+          <div class="Img-Map"></div>
+        </div>
+      </div>
+      <div class="Items-Section">
+        <h2 class="HeadTwo">Locations</h2>
+
+        <div class="Items">
+          <app-location-item
+            *ngFor="
+              let item of [
+                'lol',
+                'lol',
+                'lol',
+                'lol',
+                'lol',
+                'lol',
+                'lol',
+                'lol',
+                'lol',
+                'lol',
+                'lol'
+              ]
+            "
+          ></app-location-item>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
