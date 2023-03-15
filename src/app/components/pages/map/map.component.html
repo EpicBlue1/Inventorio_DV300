@@ -15,21 +15,9 @@
 
         <div class="Items">
           <app-location-item
-            *ngFor="
-              let item of [
-                'lol',
-                'lol',
-                'lol',
-                'lol',
-                'lol',
-                'lol',
-                'lol',
-                'lol',
-                'lol',
-                'lol',
-                'lol'
-              ]
-            "
+            [LocationName]="item.name"
+            [Route]="item.link"
+            *ngFor="let item of locations"
           ></app-location-item>
         </div>
       </div>
