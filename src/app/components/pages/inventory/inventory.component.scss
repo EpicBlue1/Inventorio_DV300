@@ -100,12 +100,11 @@
 }
 
 .Items {
-  height: 77.5%;
+  height: 65vh;
   width: 100%;
-  background-color: $Primary_lightBrown;
+  // background-color: $Primary_lightBrown;
   border-radius: 5px;
   overflow: auto;
-  @include boxShadow;
 }
 
 .search-container {
