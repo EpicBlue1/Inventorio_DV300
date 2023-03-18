@@ -14,6 +14,7 @@ import {
 })
 export class ButtonComponent implements OnInit {
   @Input() 'text': string;
+  @Input() 'ButtType': string;
   @Input() 'style': string;
   @Input() 'title': string;
   @Input() 'active': boolean;

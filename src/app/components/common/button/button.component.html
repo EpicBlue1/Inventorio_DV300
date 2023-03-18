@@ -3,6 +3,7 @@
   (mouseleave)="AnimateNavBtn()"
   (mouseenter)="AnimateNavBtn()"
   (click)="onClick($event)"
+  type="{{ ButtType }}"
   class="btn {{ style }}"
 >
   {{ text == "" ? "" : text

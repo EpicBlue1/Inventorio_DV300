@@ -6,13 +6,26 @@
 
     <div class="info-container">
       <div class="Map-section">
-        <div class="Map">
-          <div class="Img-Map"></div>
+        <h2>Map Name</h2>
+
+        <div class="Img-Map">
+          <div *ngFor="let in of counter(9); let i = index" class="Block"></div>
         </div>
+        <form class="form">
+          <label class="custom-file-upload">
+            <input type="file" accept="image/png, image/jpeg" />
+            Upload Picture
+          </label>
+          <input class="MapName" placeholder="Map Name" type="text" />
+          <app-button
+            ButtType="submit"
+            [icon]="'save.svg'"
+            [style]="'func-btn'"
+          ></app-button>
+        </form>
       </div>
       <div class="Items-Section">
-        <h2 class="HeadTwo">Locations</h2>
-
+        <h2 class="Locations">Locations:</h2>
         <div class="Items">
           <app-location-item
             [LocationName]="item.name"

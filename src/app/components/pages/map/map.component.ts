@@ -19,4 +19,8 @@ export class MapComponent {
       this.locations = locationService.getAll();
     });
   }
+
+  counter(i: number) {
+    return new Array(i);
+  }
 }
