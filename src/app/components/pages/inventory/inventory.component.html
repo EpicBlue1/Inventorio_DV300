@@ -1,50 +1,21 @@
 <div class="container">
   <div class="content-container">
     <div class="Head">
-      <h1>Welcome to Inventorio</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
-        mollitia, molestiae quas vel sint commodi repudiandae consequuntur
-        voluptatum laborum numquam blanditiis harum quisquam eius sed odit
-        fugiat iusto fuga praesentium optio, eaque rerum! Provident similique
-        accusantium nemo autem. Veritatis obcaecati tenetur iure eius earum ut
-        molestias architecto voluptate aliquam nihil, eveniet aliquid culpa
-        officia aut! Impedit sit sunt quaerat, odit, tenetur error, harum
-        nesciunt ipsum debitis quas aliquid
-      </p>
+      <h1>Welcome to your Inventory</h1>
+    </div>
+    <app-filter-search></app-filter-search>
+    <div class="Location-Filter">
+      <p class="FilterBy">Filter By Location:</p>
+      <div class="overflow">
+        <div *ngFor="let in of counter(9); let i = index" class="Location">
+          <b>Main-Base</b>
+        </div>
+      </div>
     </div>
 
     <div class="info-container">
-      <div class="Block-One">
-        <img src="../../../../assets/IconTwo.png" class="Isometric" />
-        <h2>Map Page</h2>
-        <p class="Para">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
-          mollitia, molestiae quas vel sint commodi repudiandae consequuntur
-          voluptatum laborum numquam blanditiis harum quisquam eius sed odit
-          fugiat iusto fuga praesentium optio, eaque rerum!
-        </p>
-      </div>
-      <div class="Block-One">
-        <img src="../../../../assets/IconFour.png" class="Isometric" />
-        <h2>Inventory Page</h2>
-        <p class="Para">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
-          mollitia, molestiae quas vel sint commodi repudiandae consequuntur
-          voluptatum laborum numquam blanditiis harum quisquam eius sed odit
-          fugiat iusto fuga praesentium optio, eaque rerum!
-        </p>
-      </div>
-      <div class="Block-One">
-        <img src="../../../../assets/IconOne.png" class="Isometric" />
-        <h2>Crafting Page</h2>
-        <p class="Para">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
-          mollitia, molestiae quas vel sint commodi repudiandae consequuntur
-          voluptatum laborum numquam blanditiis harum quisquam eius sed odit
-          fugiat iusto fuga praesentium optio, eaque rerum!
-        </p>
-      </div>
+      <app-inventory-item></app-inventory-item>
     </div>
   </div>
 </div>
+<div class="Add-Item"></div>

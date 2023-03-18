@@ -29,7 +29,7 @@ body {
   background-image: url("./assets/00012-2272667490.png");
   background-size: contain;
   background-size: 30%;
-  height: 100vh !important;
+  height: 100% !important;
   // font-family: "Black Ops One", cursive !important;
   // font-family: "Righteous", cursive !important;
 }
@@ -47,6 +47,11 @@ h2 {
 }
 
 p {
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif !important;
+}
+
+b {
   font-size: 14px;
   font-family: "Montserrat", sans-serif !important;
 }

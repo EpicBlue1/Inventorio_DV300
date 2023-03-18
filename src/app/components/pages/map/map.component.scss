@@ -126,19 +126,19 @@ h2 {
 }
 
 .Items-Section {
-  width: 55%;
+  width: 50%;
   background-color: $Primary_lightBrown;
   height: 80vh;
   display: flex;
   align-items: center;
   flex-direction: column;
-  border-radius: 0 5px 5px 0;
+  border-radius: 5px;
   @include boxShadow;
 }
 
 .Map-section {
   background-color: $Primary_lightBrown;
-  border-radius: 5px 0 0 5px;
+  border-radius: 5px;
   width: 45%;
   height: 80vh;
   display: flex;
@@ -200,12 +200,11 @@ input[type="file"] {
     background-size: 20% !important;
     position: relative;
     top: -10%;
-    -webkit-filter: drop-shadow(0px 10px 4px #2222227c) !important;
-    filter: drop-shadow(0px 10px 4px #2222227c) !important;
+    @include boxShadow;
   }
 
   .Img-Map {
-    height: 60%;
+    height: 55%;
     aspect-ratio: 1 / 1;
     background-image: url("../../../..//assets/Map\ Texture.png");
     image-rendering: pixelated;

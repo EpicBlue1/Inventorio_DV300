@@ -11,9 +11,11 @@ import { InventoryComponent } from './components/pages/inventory/inventory.compo
 import { MapComponent } from './components/pages/map/map.component';
 import { LocationItemComponent } from './components/common/location-item/location-item.component';
 import { GridBlockComponent } from './components/common/grid-block/grid-block.component';
+import { FilterSearchComponent } from './components/partials/filter-search/filter-search.component';
+import { InventoryItemComponent } from './components/common/inventory-item/inventory-item.component';
 
 @NgModule({
-  declarations: [AppComponent, NavComponent, ButtonComponent, HomeComponent, CraftingComponent, InventoryComponent, MapComponent, LocationItemComponent, GridBlockComponent],
+  declarations: [AppComponent, NavComponent, ButtonComponent, HomeComponent, CraftingComponent, InventoryComponent, MapComponent, LocationItemComponent, GridBlockComponent, FilterSearchComponent, InventoryItemComponent],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
