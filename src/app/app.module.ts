@@ -13,9 +13,11 @@ import { LocationItemComponent } from './components/common/location-item/locatio
 import { GridBlockComponent } from './components/common/grid-block/grid-block.component';
 import { FilterSearchComponent } from './components/partials/filter-search/filter-search.component';
 import { InventoryItemComponent } from './components/common/inventory-item/inventory-item.component';
+import { CraftingItemComponent } from './components/common/crafting-item/crafting-item.component';
+import { CraftingReqComponent } from './components/common/crafting-req/crafting-req.component';
 
 @NgModule({
-  declarations: [AppComponent, NavComponent, ButtonComponent, HomeComponent, CraftingComponent, InventoryComponent, MapComponent, LocationItemComponent, GridBlockComponent, FilterSearchComponent, InventoryItemComponent],
+  declarations: [AppComponent, NavComponent, ButtonComponent, HomeComponent, CraftingComponent, InventoryComponent, MapComponent, LocationItemComponent, GridBlockComponent, FilterSearchComponent, InventoryItemComponent, CraftingItemComponent, CraftingReqComponent],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
