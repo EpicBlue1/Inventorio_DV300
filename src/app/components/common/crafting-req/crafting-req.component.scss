@@ -13,10 +13,14 @@
   background-position: center;
   display: flex;
   align-items: flex-end;
+  margin-left: 15px;
 }
 
 .Number {
   width: 19px;
+  position: relative;
+  top: 5px;
+  right: 5px;
   height: 19px;
   background-color: white;
   border-radius: 50px;
