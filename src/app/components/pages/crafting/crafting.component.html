@@ -1,1 +1,15 @@
-<p>crafting works!</p>
+<div class="container">
+  <div class="content-container">
+    <div class="Head">
+      <h1>Welcome to your Inventory</h1>
+    </div>
+    <app-filter-search></app-filter-search>
+
+    <div class="Items">
+      <app-inventory-item
+        *ngFor="let in of counter(9); let i = index"
+      ></app-inventory-item>
+    </div>
+  </div>
+</div>
+<div class="Add-Item"></div>

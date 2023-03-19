@@ -10,4 +10,8 @@ export class CraftingComponent {
   constructor(activatedRoute: ActivatedRoute, private router: Router) {
     activatedRoute.params.subscribe();
   }
+
+  counter(i: number) {
+    return new Array(i);
+  }
 }
