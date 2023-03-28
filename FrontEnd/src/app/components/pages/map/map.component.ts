@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Observable } from 'rxjs';
 import { LocationService } from 'src/app/services/location.service';
 import { Location } from 'src/app/shared/models/location';
 
@@ -15,8 +16,13 @@ export class MapComponent {
     locationService: LocationService,
     activatedRoute: ActivatedRoute
   ) {
+    let foodsObservable: Observable<Location[]>;
+
     activatedRoute.params.subscribe((params) => {
-      this.locations = locationService.getAll();
+      foodsObservable = locationService.getAll();
+    });
+    foodsObservable.subscribe((serverLocations) => {
+      this.locations = serverLocations;
     });
   }
 
