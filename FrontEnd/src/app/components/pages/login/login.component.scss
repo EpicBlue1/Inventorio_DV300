@@ -1,0 +1,18 @@
+.Container {
+  width: 85%;
+  height: 100vh;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-45%, -50%);
+  text-align: left;
+  color: white;
+  align-self: auto;
+  padding: 0 50px 0px 50px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  // @include boxShadow;
+  overflow: auto;
+}

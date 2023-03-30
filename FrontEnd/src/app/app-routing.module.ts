@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { CraftingComponent } from './components/pages/crafting/crafting.component';
 import { HomeComponent } from './components/pages/home/home.component';
 import { InventoryComponent } from './components/pages/inventory/inventory.component';
+import { LoginComponent } from './components/pages/login/login.component';
 import { MapComponent } from './components/pages/map/map.component';
 
 //wildcard (make sure its last route)
@@ -27,6 +28,10 @@ const routes: Routes = [
   {
     path: 'Map',
     component: MapComponent,
+  },
+  {
+    path: 'login',
+    component: LoginComponent,
   },
 ];
 

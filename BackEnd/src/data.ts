@@ -1,17 +1,24 @@
 export const sample_locations: any[] = [
   {
-    id: 1,
     name: "Main base",
     link: "/Inventory",
-    icon: "",
+    icon: "aa",
+    userId: "lollos",
     items: ["hammer", "ball"],
   },
   {
-    id: 2,
     name: "Train station base",
     link: "/Inventory",
-    icon: "",
+    icon: "aa",
+    userId: "lollos2",
     items: ["hammer", "ball"],
+  },
+];
+
+export const sample_users: any[] = [
+  {
+    userName: "Reinie",
+    loginCode: "FFW-062",
   },
 ];
 
@@ -19,16 +26,15 @@ export const sample_recipes: any[] = [
   {
     levelOne_Recipes: [
       {
-        id: 1,
         Recipe_Level: 1,
         Recipe_Name: "Copper Plate",
         Craft_Time: 3.5,
         Material_Req: [{ Req_Name: "Copper Ore", Total_Req: 1 }],
         Building_Req: "Furnace",
+        Img: "",
         Produces: 1,
       },
       {
-        id: 2,
         Recipe_Level: 1,
         Recipe_Name: "Iron Plate",
         Craft_Time: 3.5,
@@ -37,7 +43,6 @@ export const sample_recipes: any[] = [
         Produces: 1,
       },
       {
-        id: 3,
         Recipe_Level: 1,
         Recipe_Name: "Wood",
         Craft_Time: 0.5,
@@ -46,7 +51,6 @@ export const sample_recipes: any[] = [
         Produces: 2,
       },
       {
-        id: 4,
         Recipe_Level: 1,
         Recipe_Name: "Landfill",
         Craft_Time: 0.5,
@@ -55,7 +59,6 @@ export const sample_recipes: any[] = [
         Produces: 1,
       },
       {
-        id: 5,
         Recipe_Level: 1,
         Recipe_Name: "Wooden Chest",
         Craft_Time: 0.5,
@@ -64,7 +67,6 @@ export const sample_recipes: any[] = [
         Produces: 1,
       },
       {
-        id: 6,
         Recipe_Level: 1,
         Recipe_Name: "Copper Cable",
         Craft_Time: 0.5,
@@ -73,7 +75,6 @@ export const sample_recipes: any[] = [
         Produces: 2,
       },
       {
-        id: 7,
         Recipe_Level: 1,
         Recipe_Name: "Iron Gear Wheel",
         Craft_Time: 0.5,
@@ -82,7 +83,6 @@ export const sample_recipes: any[] = [
         Produces: 2,
       },
       {
-        id: 8,
         Recipe_Level: 1,
         Recipe_Name: "Copper Cable",
         Craft_Time: 0.5,
@@ -95,7 +95,6 @@ export const sample_recipes: any[] = [
   {
     levelOne_Recipes: [
       {
-        id: 1,
         Recipe_Level: 2,
         Recipe_Name: "Iron Stick",
         Craft_Time: 0.5,
@@ -104,7 +103,6 @@ export const sample_recipes: any[] = [
         Produces: 2,
       },
       {
-        id: 2,
         Recipe_Level: 2,
         Recipe_Name: "Pipe",
         Craft_Time: 0.5,
@@ -113,7 +111,6 @@ export const sample_recipes: any[] = [
         Produces: 4,
       },
       {
-        id: 3,
         Recipe_Level: 2,
         Recipe_Name: "Stone Brick",
         Craft_Time: 3.5,
@@ -122,7 +119,6 @@ export const sample_recipes: any[] = [
         Produces: 1,
       },
       {
-        id: 4,
         Recipe_Level: 2,
         Recipe_Name: "Stone Furnace",
         Craft_Time: 0.5,
@@ -131,7 +127,6 @@ export const sample_recipes: any[] = [
         Produces: 2,
       },
       {
-        id: 5,
         Recipe_Level: 2,
         Recipe_Name: "Grenade",
         Craft_Time: 8,
@@ -143,7 +138,6 @@ export const sample_recipes: any[] = [
         Produces: 1,
       },
       {
-        id: 6,
         Recipe_Level: 2,
         Recipe_Name: "Steel Plate",
         Craft_Time: 0.5,
@@ -152,6 +146,14 @@ export const sample_recipes: any[] = [
           { Req_Name: "Coal", Total_Req: 10 },
         ],
         Building_Req: "Furnace",
+        Produces: 1,
+      },
+      {
+        Recipe_Level: 2,
+        Recipe_Name: "Iron Gear Wheel",
+        Craft_Time: 0.5,
+        Material_Req: [{ Req_Name: "Iron Plate", Total_Req: 1 }],
+        Building_Req: "Assembling Machine",
         Produces: 1,
       },
     ],
