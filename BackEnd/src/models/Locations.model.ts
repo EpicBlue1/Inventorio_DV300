@@ -2,6 +2,7 @@ import { Schema, model } from "mongoose";
 
 export interface Location {
   name: string;
+  index: number;
   link: string;
   icon: string;
   userId: string;
@@ -11,6 +12,7 @@ export interface Location {
 export const LocationSchema = new Schema<Location>(
   {
     name: { type: String, required: true },
+    index: { type: Number, required: true },
     link: { type: String, required: true },
     icon: { type: String, required: true },
     userId: { type: String, required: true },

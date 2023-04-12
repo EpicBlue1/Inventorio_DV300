@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
 import { LocationService } from 'src/app/services/location.service';
@@ -11,6 +11,18 @@ import { Location } from 'src/app/shared/models/location';
 })
 export class MapComponent {
   locations!: Location[];
+
+  divVisibility = [
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+  ];
 
   constructor(
     locationService: LocationService,
@@ -28,5 +40,17 @@ export class MapComponent {
 
   counter(i: number) {
     return new Array(i);
+  }
+
+  showDiv(index: number): void {
+    console.log('lol');
+
+    this.divVisibility[index] = true;
+  }
+
+  hideDiv(index: number): void {
+    console.log('lollos');
+
+    this.divVisibility[index] = false;
   }
 }

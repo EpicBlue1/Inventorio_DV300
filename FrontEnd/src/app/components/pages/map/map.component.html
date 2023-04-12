@@ -9,7 +9,19 @@
         <h2>Map Name</h2>
 
         <div class="Img-Map">
-          <div *ngFor="let in of counter(9); let i = index" class="Block"></div>
+          <div
+            (click)="showDiv(i)"
+            *ngFor="let in of counter(9); let i = index"
+            class="Block"
+          >
+            <div *ngIf="divVisibility[i]">
+              <app-mapmodal
+                [visibility]="divVisibility[i]"
+                Index="{{ i }}"
+                (buttonHide)="hideDiv(i)"
+              ></app-mapmodal>
+            </div>
+          </div>
         </div>
       </div>
       <div class="Items-Section">

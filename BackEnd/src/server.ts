@@ -22,9 +22,10 @@ app.use(
     origin: ["http://localhost:4200"],
   })
 );
-
 app.use("/api/locations", locationRouter);
 app.use("/api/users", userRouter);
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 
 mongoose.set("strictQuery", false);
 mongoose

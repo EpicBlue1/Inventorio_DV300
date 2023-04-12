@@ -16,6 +16,7 @@ import { InventoryComponent } from './components/pages/inventory/inventory.compo
 import { LoginComponent } from './components/pages/login/login.component';
 import { MapComponent } from './components/pages/map/map.component';
 import { FilterSearchComponent } from './components/partials/filter-search/filter-search.component';
+import { MapmodalComponent } from './components/partials/mapmodal/mapmodal.component';
 import { NavComponent } from './components/partials/nav/nav.component';
 
 @NgModule({
@@ -34,6 +35,7 @@ import { NavComponent } from './components/partials/nav/nav.component';
     CraftingItemComponent,
     CraftingReqComponent,
     LoginComponent,
+    MapmodalComponent,
   ],
   imports: [
     BrowserModule,

@@ -80,3 +80,10 @@ input {
   @include boxShadow();
   border-radius: 5px;
 }
+
+button {
+  border: none;
+  border-radius: 5px;
+  background-color: $Primary_lightBrown;
+  @include boxShadow();
+}

@@ -14,4 +14,19 @@ export class LocationService {
   getAll(): Observable<Location[]> {
     return this.http.get<Location[]>(LOCATIONS_URL);
   }
+
+  postNewLocation(item: any) {
+    console.log(item);
+
+    return this.http
+      .post<Location>('http://localhost:5001/api/locations/newLocation', item)
+      .subscribe(
+        (response) => {
+          console.log('HTTP response:', response);
+        },
+        (error) => {
+          console.log('HTTP error:', error);
+        }
+      );
+  }
 }
