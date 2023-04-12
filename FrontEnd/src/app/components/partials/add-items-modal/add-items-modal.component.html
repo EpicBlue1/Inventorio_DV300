@@ -1,0 +1,14 @@
+<div class="container">
+  <h2>Add Items</h2>
+  <form>
+    <div class="Overflow">
+      <div *ngFor="let item of allItems" class="Item">
+        <label>{{ item.ItemName }}</label>
+        <label>Lvl: {{ item.lvlRecipe }}</label>
+        <input type="number" [defaultValue]="0" />
+      </div>
+    </div>
+
+    <button>Add</button>
+  </form>
+</div>

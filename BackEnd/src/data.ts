@@ -22,6 +22,174 @@ export const sample_users: any[] = [
   },
 ];
 
+export const sample_allItems: any[] = [
+  {
+    ItemName: "Copper Plate",
+    lvlRecipe: "1",
+    Icon: "CopperPlate.png",
+  },
+  {
+    ItemName: "Iron Plate",
+    lvlRecipe: "1",
+    Icon: "IronPlate.png",
+  },
+  {
+    ItemName: "Wood",
+    lvlRecipe: "1",
+    Icon: "Wood.png",
+  },
+  {
+    ItemName: "Landfill",
+    lvlRecipe: "1",
+    Icon: "Landfill.png",
+  },
+  {
+    ItemName: "Wooden Chest",
+    lvlRecipe: "1",
+    Icon: "WoodenChest.png",
+  },
+  {
+    ItemName: "Copper Cable",
+    lvlRecipe: "1",
+    Icon: "CopperCable.png",
+  },
+  {
+    ItemName: "Iron Gear Wheel",
+    lvlRecipe: "1",
+    Icon: "IronGearWheel.png",
+  },
+  {
+    ItemName: "Assembling Machine",
+    lvlRecipe: "1",
+    Icon: "AssemblingMachine.png",
+  },
+  {
+    ItemName: "Iron Stick",
+    lvlRecipe: "2",
+    Icon: "IronStick.png",
+  },
+  {
+    ItemName: "Pipe",
+    lvlRecipe: "2",
+    Icon: "Pipe.png",
+  },
+  {
+    ItemName: "Stone Brick",
+    lvlRecipe: "2",
+    Icon: "StoneBrick.png",
+  },
+  {
+    ItemName: "Stone Furnace",
+    lvlRecipe: "2",
+    Icon: "StoneFurnace.png",
+  },
+  {
+    ItemName: "Grenade",
+    lvlRecipe: "2",
+    Icon: "Grenade.png",
+  },
+  {
+    ItemName: "Steel Plate",
+    lvlRecipe: "2",
+    Icon: "SteelPlate.png",
+  },
+  {
+    ItemName: "Iron Chest",
+    lvlRecipe: "2",
+    Icon: "IronChest.png",
+  },
+  {
+    ItemName: "Pistol",
+    lvlRecipe: "2",
+    Icon: "Pistol.png",
+  },
+  {
+    ItemName: "Firearm Magazine",
+    lvlRecipe: "2",
+    Icon: "FirearmMagazine.png",
+  },
+  {
+    ItemName: "Shotgun Shells",
+    lvlRecipe: "2",
+    Icon: "ShotgunShells.png",
+  },
+  {
+    ItemName: "Electronic Circuit",
+    lvlRecipe: "2",
+    Icon: "ElectronicCircuit.png",
+  },
+  {
+    ItemName: "Small Electric Pole",
+    lvlRecipe: "2",
+    Icon: "SmallElectric Pole.png",
+  },
+  {
+    ItemName: "Assembling Machine 2",
+    lvlRecipe: "2",
+    Icon: "AssemblingMachine2.png",
+  },
+  {
+    ItemName: "Storage Tank",
+    lvlRecipe: "3",
+    Icon: "StorageTank.png",
+  },
+  {
+    ItemName: "Concrete",
+    lvlRecipe: "3",
+    Icon: "Concrete.png",
+  },
+  {
+    ItemName: "Pipe to ground",
+    lvlRecipe: "3",
+    Icon: "Pipetoground.png",
+  },
+  {
+    ItemName: "Boiler",
+    lvlRecipe: "3",
+    Icon: "Boiler.png",
+  },
+  {
+    ItemName: "Steam Engine",
+    lvlRecipe: "3",
+    Icon: "SteamEngine.png",
+  },
+  {
+    ItemName: "Transport belt",
+    lvlRecipe: "3",
+    Icon: "TransportBelt.png",
+  },
+  {
+    ItemName: "Inserter",
+    lvlRecipe: "3",
+    Icon: "Inserter.png",
+  },
+  {
+    ItemName: "Burner Inserter",
+    lvlRecipe: "3",
+    Icon: "BurnerInserter.png",
+  },
+  {
+    ItemName: "Repair Pack",
+    lvlRecipe: "3",
+    Icon: "RepairPack.png",
+  },
+  {
+    ItemName: "Steel Chest",
+    lvlRecipe: "3",
+    Icon: "SteelChest.png",
+  },
+  {
+    ItemName: "Shotgun",
+    lvlRecipe: "3",
+    Icon: "Shotgun.png",
+  },
+  {
+    ItemName: "Burner Mining Drill",
+    lvlRecipe: "3",
+    Icon: "BurnerMiningDrill.png",
+  },
+];
+
 export const sample_recipes: any[] = [
   {
     levelOne_Recipes: [

@@ -24,7 +24,7 @@ export class MapComponent {
     { label: 'Item 6', disabled: false },
     { label: 'Item 7', disabled: false },
     { label: 'Item 8', disabled: false },
-    { label: 'Item 9', disabled: true },
+    { label: 'Item 9', disabled: false },
   ];
 
   divVisibility = [

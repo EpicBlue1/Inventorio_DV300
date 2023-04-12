@@ -3,6 +3,7 @@ import dotenv from "dotenv";
 import express from "express";
 import { sample_locations } from "./data";
 import { UserSchema } from "./models/User.model";
+import allitemsRouter from "./routers/allItems.router";
 import locationRouter from "./routers/location.router";
 import userRouter from "./routers/user.router";
 const mongoose = require("mongoose");
@@ -24,6 +25,8 @@ app.use(
 );
 app.use("/api/locations", locationRouter);
 app.use("/api/users", userRouter);
+app.use("/api/allItems", allitemsRouter);
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
