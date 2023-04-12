@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, ElementRef, Input, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
 import { LocationService } from 'src/app/services/location.service';
@@ -11,6 +11,21 @@ import { Location } from 'src/app/shared/models/location';
 })
 export class MapComponent {
   locations!: Location[];
+  @ViewChild('Blocks') Blocks: ElementRef;
+
+  icon: any = ' ';
+
+  items = [
+    { label: 'Item 1', disabled: false },
+    { label: 'Item 2', disabled: false },
+    { label: 'Item 3', disabled: false },
+    { label: 'Item 4', disabled: false },
+    { label: 'Item 5', disabled: false },
+    { label: 'Item 6', disabled: false },
+    { label: 'Item 7', disabled: false },
+    { label: 'Item 8', disabled: false },
+    { label: 'Item 9', disabled: true },
+  ];
 
   divVisibility = [
     false,
@@ -28,22 +43,32 @@ export class MapComponent {
     locationService: LocationService,
     activatedRoute: ActivatedRoute
   ) {
-    let foodsObservable: Observable<Location[]>;
+    let locationsObservable: Observable<Location[]>;
 
     activatedRoute.params.subscribe((params) => {
-      foodsObservable = locationService.getAll();
+      locationsObservable = locationService.getAll();
     });
-    foodsObservable.subscribe((serverLocations) => {
+    locationsObservable.subscribe((serverLocations) => {
       this.locations = serverLocations;
+
+      const divElements = this.Blocks.nativeElement.querySelectorAll('div');
+      console.log(this.locations);
+
+      this.locations.forEach((item) => {
+        const divElement = divElements[item.index];
+        divElement.style.backgroundImage = `url(../../../../assets/${item.icon})`;
+      });
     });
   }
+
+  ngAfterViewInit() {}
 
   counter(i: number) {
     return new Array(i);
   }
 
   showDiv(index: number): void {
-    console.log('lol');
+    console.log(this.locations);
 
     this.divVisibility[index] = true;
   }
@@ -52,5 +77,11 @@ export class MapComponent {
     console.log('lollos');
 
     this.divVisibility[index] = false;
+  }
+
+  removeFunct(index: number) {
+    this.divVisibility[index] = false;
+
+    this.items[index].disabled = true;
   }
 }

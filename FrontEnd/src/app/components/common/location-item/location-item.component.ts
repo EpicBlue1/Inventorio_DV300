@@ -8,4 +8,5 @@ import { Component, Input } from '@angular/core';
 export class LocationItemComponent {
   @Input() 'LocationName': string;
   @Input() 'Route': string;
+  @Input() 'LocationIcon': string;
 }

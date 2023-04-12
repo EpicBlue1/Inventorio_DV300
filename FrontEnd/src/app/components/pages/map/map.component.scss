@@ -99,12 +99,16 @@ h2 {
   width: 99%;
   height: 99%;
   z-index: 0 !important;
+  background-size: 60%;
+
+  background-repeat: no-repeat;
+  background-position: center;
   border-radius: 5px; // grid-row: 1 / 3 !important;
 }
 
 .Block:hover {
   background-color: rgba(255, 255, 255, 0.25);
-  background-image: url("../../../../assets/add_circle.svg");
+  background-image: url("../../../../assets/add_circle.svg") !important;
   background-size: 40%;
   background-repeat: no-repeat;
   background-position: center;
@@ -147,6 +151,10 @@ h2 {
   justify-content: space-around;
   align-items: center;
   @include boxShadow;
+}
+
+.disabled {
+  pointer-events: none;
 }
 
 input[type="file"] {

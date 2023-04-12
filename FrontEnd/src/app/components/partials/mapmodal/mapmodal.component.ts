@@ -12,6 +12,7 @@ export class MapmodalComponent {
   @Input() 'visibility': any;
   @Output() buttonHide = new EventEmitter<void>();
   @Output() buttonShow = new EventEmitter<void>();
+  @Output() disableBlock = new EventEmitter<void>();
   iconIndex: any;
   isHidden = false;
   blockNumber: any;
@@ -77,7 +78,6 @@ export class MapmodalComponent {
     console.log(data);
 
     this.locationService.postNewLocation(data);
-
-    // this.buttonHide.emit();
+    this.disableBlock.emit();
   }
 }
