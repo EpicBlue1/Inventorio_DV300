@@ -56,4 +56,40 @@ router.post("/newLocation", jsonParser, async (req, res) => {
   }
 });
 
+router.patch("/AddItems/:name", jsonParser, async (req, res) => {
+  // console.log(req.body);
+
+  try {
+    let mapName = req.params.name;
+
+    const findMap = await LocationModel.find({
+      name: mapName,
+    });
+
+    if (findMap) {
+      const existingElements = findMap[0].items || [];
+      const hasNewElements = req.body.every((newElement: any) => {
+        return existingElements.some((existingElement: any) => {
+          console.log(newElement);
+
+          return existingElement.ItemName === newElement.ItemName;
+        });
+      });
+
+      console.log(hasNewElements);
+
+      if (!hasNewElements) {
+        const addItem = await LocationModel.updateOne(
+          { _id: findMap[0]._id },
+          { $addToSet: { items: { $each: req.body } } }
+        );
+      } else {
+        res.json("Already added");
+      }
+    }
+  } catch (error) {
+    res.json(error);
+  }
+});
+
 export default router;

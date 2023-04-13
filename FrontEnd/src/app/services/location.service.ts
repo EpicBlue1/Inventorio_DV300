@@ -29,4 +29,22 @@ export class LocationService {
         }
       );
   }
+
+  addNewItem(item: any, name: any) {
+    console.log(item);
+
+    return this.http
+      .patch<Location>(
+        'http://localhost:5001/api/locations/AddItems/' + name,
+        item
+      )
+      .subscribe(
+        (response) => {
+          console.log('HTTP response:', response);
+        },
+        (error) => {
+          console.log('HTTP error:', error);
+        }
+      );
+  }
 }
