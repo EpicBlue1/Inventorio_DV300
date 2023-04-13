@@ -1,4 +1,4 @@
-import { Component, NgZone } from '@angular/core';
+import { Component, EventEmitter, Input, NgZone, Output } from '@angular/core';
 import {
   FormArray,
   FormBuilder,
@@ -21,6 +21,10 @@ import { Location } from 'src/app/shared/models/location';
 export class AddItemsModalComponent {
   allItems!: AllItens[];
   locations!: Location[];
+  @Input() 'visibility': any;
+
+  @Output() buttonHide = new EventEmitter<void>();
+  @Output() buttonShow = new EventEmitter<void>();
 
   constructor(
     allitemService: AllitemService,
@@ -107,5 +111,13 @@ export class AddItemsModalComponent {
       array,
       this.form.controls['locationName'].value
     );
+  }
+
+  handleClick(): void {
+    this.buttonHide.emit();
+  }
+
+  handleClickTwo(): void {
+    this.buttonShow.emit();
   }
 }

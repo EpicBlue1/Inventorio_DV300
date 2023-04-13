@@ -1,4 +1,5 @@
-<div class="container">
+<div *ngIf="visibility" class="container">
+  <div (click)="handleClick()" class="close">X</div>
   <h2>Add Items</h2>
   <form (ngSubmit)="formSubmit()" [formGroup]="form">
     <h3>Select Location</h3>

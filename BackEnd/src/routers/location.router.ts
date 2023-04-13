@@ -56,6 +56,31 @@ router.post("/newLocation", jsonParser, async (req, res) => {
   }
 });
 
+router.get("/search/:searchTerm", async (req, res) => {
+  const searchTerm = req.params.searchTerm;
+
+  const Locations = await LocationModel.find();
+
+  // const filteredItems = Locations.flatMap((obj) => obj.items).filter(
+  //   (item) =>
+  //     typeof item.ItemName === "string" &&
+  //     item.ItemName.toLowerCase().includes(searchTerm.toLowerCase())
+  // );
+
+  const filteredObjects = Locations.map((obj) => ({
+    ...obj,
+    items: obj.items.filter(
+      (item) =>
+        typeof item.ItemName === "string" &&
+        item.ItemName.toLowerCase().includes(searchTerm.toLowerCase())
+    ),
+  }));
+
+  console.log(filteredObjects);
+
+  res.send(filteredObjects);
+});
+
 router.patch("/AddItems/:name", jsonParser, async (req, res) => {
   // console.log(req.body);
 

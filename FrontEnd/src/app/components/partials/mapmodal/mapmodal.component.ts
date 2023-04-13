@@ -9,7 +9,7 @@ import { LocationService } from 'src/app/services/location.service';
 })
 export class MapmodalComponent {
   @Input() 'Index': any;
-  @Input() 'visibility': any;
+  @Input() 'visibility': any = false;
   @Output() buttonHide = new EventEmitter<void>();
   @Output() buttonShow = new EventEmitter<void>();
   @Output() disableBlock = new EventEmitter<void>();

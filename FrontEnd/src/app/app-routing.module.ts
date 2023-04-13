@@ -18,7 +18,7 @@ const routes: Routes = [
     component: CraftingComponent,
   },
   {
-    path: 'Inventory/:searchTerm',
+    path: 'Inventory/search/:searchTerm',
     component: InventoryComponent,
   },
   {

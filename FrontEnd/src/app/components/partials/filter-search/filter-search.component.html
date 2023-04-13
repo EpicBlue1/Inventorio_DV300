@@ -1,13 +1,12 @@
 <div class="container">
-  <b>Filter By:</b>
-  <select>
-    <option>Select</option>
-    <option>Something else</option>
-  </select>
-
-  <b>10 Items</b>
+  <b>{{ NumberItems }} Items</b>
   <div class="Search">
-    <input placeholder="Search" />
-    <button class="SearchButton"></button>
+    <input
+      #s
+      (keyup.enter)="search(s.value)"
+      [value]="searchTerm"
+      placeholder="Search"
+    />
+    <button (click)="search(s.value)" class="SearchButton"></button>
   </div>
 </div>
