@@ -7,4 +7,7 @@ import { Component, Input } from '@angular/core';
 })
 export class CraftingItemComponent {
   @Input() 'Grayed': string;
+  @Input() 'Name': string;
+  @Input() 'Level';
+  @Input() 'Req';
 }
