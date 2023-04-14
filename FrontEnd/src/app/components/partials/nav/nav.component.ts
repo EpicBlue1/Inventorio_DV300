@@ -12,15 +12,43 @@ export class NavComponent {
   showNavBar = true;
   subscription: Subscription;
   hideNavbarLinks = '/login';
+  userId;
+  LogInText = 'LogIn';
 
   constructor(
     private route: ActivatedRoute,
     private router: Router,
     public nav: NavBarService
-  ) {}
+  ) {
+    this.userId = localStorage.getItem('UserId');
+
+    if (
+      this.userId === undefined ||
+      this.userId === '' ||
+      this.userId === null
+    ) {
+    } else {
+      this.LogInText = 'LogOut';
+      console.log('logged in');
+    }
+  }
 
   showNav(): boolean {
     return !this.hideNavbarLinks.includes(this.router.url);
+  }
+
+  logOutIN() {
+    console.log(localStorage.getItem('UserId'));
+
+    if (
+      this.userId === undefined ||
+      this.userId === '' ||
+      this.userId === null
+    ) {
+      this.router.navigateByUrl('/login');
+    } else {
+      localStorage.clear();
+    }
   }
 
   ngOnInit() {
