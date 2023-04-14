@@ -18,7 +18,7 @@ export const sample_locations: any[] = [
 export const sample_users: any[] = [
   {
     userName: "Reinie",
-    loginCode: "FFW-062",
+    loginCode: 548,
   },
 ];
 

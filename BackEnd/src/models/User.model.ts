@@ -8,7 +8,7 @@ export interface User {
 export const UserSchema = new Schema<User>(
   {
     userName: { type: String, required: true },
-    loginCode: { type: String, required: true, unique: true },
+    loginCode: { type: String, required: true },
   },
   { timestamps: true }
 );

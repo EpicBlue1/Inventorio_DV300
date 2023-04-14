@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-login',
@@ -9,12 +10,18 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class LoginComponent {
   loginForm!: FormGroup;
   isSubmitted = false;
-  constructor(private formBuilder: FormBuilder) {}
+  rotation = 0;
+  constructor(
+    private formBuilder: FormBuilder,
+    private userService: UserService
+  ) {}
 
   ngOnInit(): void {
     this.loginForm = this.formBuilder.group({
-      email: ['', [Validators.required, Validators.email]],
-      password: ['', Validators.required],
+      userName: ['', [Validators.required, Validators.email]],
+      one: ['', Validators.required],
+      two: ['', Validators.required],
+      three: ['', Validators.required],
     });
   }
 
@@ -23,10 +30,20 @@ export class LoginComponent {
   }
 
   submit() {
-    this.isSubmitted = true;
-    if (this.loginForm.invalid) return;
+    let payload = {
+      userName: this.loginForm.controls['userName'].value,
+      loginCode: parseInt(
+        this.loginForm.controls['one'].value +
+          this.loginForm.controls['two'].value.toString() +
+          this.loginForm.controls['three'].value
+      ),
+    };
 
-    // alert(`email: ${this.fc.email.value},
-    //  password: ${this.fc.password.value}`);
+    this.userService.Login(payload, '');
+  }
+
+  onInputChanged(event: Event) {
+    // Update the rotation angle by 10 degrees each time the input changes
+    this.rotation += 10;
   }
 }
