@@ -113,11 +113,11 @@ Initial wireframes:
 
 <!-- TODO: Add Mockups -->
 <p align="center">
-    <img src="ReadmeImages/Mockup_1.jpg" height="300"  >
-    <img src="ReadmeImages/Mockup_2.jpg" height="300"  >
+    <img src="ReadmeImages/Mockup_1.png" height="300"  >
+    <img src="ReadmeImages/Mockup_2.png" height="300"  >
     <br/>
-    <img src="ReadmeImages/Mockup_3.jpg" height="300"  >
-    <img src="ReadmeImages/Mockup_4.jpg" height="300"  >
+    <img src="ReadmeImages/Mockup_3.png" height="300"  >
+    <img src="ReadmeImages/Mockup_4.png" height="300"  >
 </p>
 
 <br/>
