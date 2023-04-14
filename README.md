@@ -9,10 +9,6 @@ Reinhardt de Beer 21100115
 
 # INVENTORIO - Development Term 1
 
-<p align="center">
-    <img src="assets/Logo.png" align="center" height="200" width="600" >
-</p>
-
 Welcome to Inventorio, the ultimate inventory management website for Factorio players! Our website is made with andgular and typescript that is designed to make managing your in-game inventory a breeze. With Inventorio, you can easily add locations, store items inside those locations, add your desired items, and craft items, all with just a few clicks.
 
 ## Table of contents
@@ -75,12 +71,6 @@ npm i
 - Search through your items
 
 ## Development Process
-
-### Ideation
-
-<p align="center">
-    <img src="assets/ConceptIdeation.png" align="center" height="730" >
-</p>
 
 ### Wireframes
 
