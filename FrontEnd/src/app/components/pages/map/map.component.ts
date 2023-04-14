@@ -11,6 +11,8 @@ import { Location } from 'src/app/shared/models/location';
 })
 export class MapComponent {
   locations!: Location[];
+  userId;
+
   @ViewChild('Blocks') Blocks: ElementRef;
 
   icon: any = ' ';
@@ -45,11 +47,15 @@ export class MapComponent {
   ) {
     let locationsObservable: Observable<Location[]>;
 
+    this.userId = localStorage.getItem('UserId');
+
     activatedRoute.params.subscribe((params) => {
       locationsObservable = locationService.getAll();
     });
     locationsObservable.subscribe((serverLocations) => {
-      this.locations = serverLocations;
+      this.locations = serverLocations.filter(
+        (item) => item.userId === this.userId
+      );
 
       const divElements = this.Blocks.nativeElement.querySelectorAll('div');
       console.log(this.locations);

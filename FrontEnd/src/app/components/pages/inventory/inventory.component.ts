@@ -18,6 +18,7 @@ export class InventoryComponent {
   items: any;
   itemsCount: any;
   searchTerm: any;
+  userId;
 
   divVisibility = false;
 
@@ -34,6 +35,7 @@ export class InventoryComponent {
     activatedRoute: ActivatedRoute
   ) {
     let locationsObservable: Observable<Location[]>;
+    this.userId = localStorage.getItem('UserId');
 
     activatedRoute.params.subscribe((params) => {
       // if (params['searchTerm']) {
@@ -48,7 +50,9 @@ export class InventoryComponent {
       this.searchTerm = params['searchTerm'];
     });
     locationsObservable.subscribe((serverLocations) => {
-      this.locations = serverLocations;
+      this.locations = serverLocations.filter(
+        (item) => item.userId === this.userId
+      );
 
       const itemCounts = this.locations.map((obj) => obj.items.length);
       const sum = itemCounts.reduce((acc, val) => acc + val, 0);

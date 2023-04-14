@@ -16,8 +16,11 @@ export class MapmodalComponent {
   iconIndex: any;
   isHidden = false;
   blockNumber: any;
+  userId;
 
-  constructor(private locationService: LocationService) {}
+  constructor(private locationService: LocationService) {
+    this.userId = localStorage.getItem('UserId');
+  }
 
   IconsSelect = [
     'Butter.png',
@@ -70,7 +73,7 @@ export class MapmodalComponent {
       link: this.newLocationForm.controls['LocationName'].value,
       icon: this.IconsSelect[this.iconIndex],
       name: this.newLocationForm.controls['LocationName'].value,
-      userId: 1,
+      userId: this.userId,
       index: this.blockNumber,
       items: [],
     };
